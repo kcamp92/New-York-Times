@@ -7,3 +7,22 @@
 //
 
 import Foundation
+struct BestSellersWrapper: Codable {
+    let results: [BestSellers]
+}
+
+struct BestSellers: Codable {
+    let weeks_on_list: Int
+    let isbns: [Isbn]
+    let book_details: [BookDetails]
+}
+
+struct Isbn: Codable {
+    let isbn10: String
+    let isbn13: String
+    
+}
+struct BookDetails: Codable {
+    let description: String
+}
+
