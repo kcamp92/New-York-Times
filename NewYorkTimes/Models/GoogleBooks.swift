@@ -9,6 +9,16 @@
 import Foundation
 struct BookWrapper: Codable {
     let items: [Items]
+  
+    static func getGoogleBookData(from data:Data) -> Books? {
+         do {
+             let newbook = try JSONDecoder().decode(Items.self, from: data)
+            return newbook.volumeInfo
+         } catch let error {
+             print(error)
+             return nil
+         }
+     }
 }
 
 struct Items: Codable {
