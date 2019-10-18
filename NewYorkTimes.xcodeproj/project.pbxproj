@@ -30,6 +30,7 @@
 		28348998235A464600839519 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28348997235A464600839519 /* DetailViewController.swift */; };
 		2834899A235A46C200839519 /* BestSellerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28348999235A46C200839519 /* BestSellerCollectionViewCell.swift */; };
 		2834899D235A46F400839519 /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2834899C235A46F400839519 /* FavoritesTableViewCell.swift */; };
+		DF7B2F55235A4EAC0092B3DE /* NYTCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B2F54235A4EAC0092B3DE /* NYTCategories.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		28348997235A464600839519 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		28348999235A46C200839519 /* BestSellerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionViewCell.swift; sourceTree = "<group>"; };
 		2834899C235A46F400839519 /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
+		DF7B2F54235A4EAC0092B3DE /* NYTCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTCategories.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +192,7 @@
 				28348990235A45EB00839519 /* NYTimes.swift */,
 				28348992235A45FE00839519 /* GoogleBooks.swift */,
 				28348994235A460E00839519 /* Favorites.swift */,
+				DF7B2F54235A4EAC0092B3DE /* NYTCategories.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				28348972235A422A00839519 /* FavoritesViewController.swift in Sources */,
 				28348998235A464600839519 /* DetailViewController.swift in Sources */,
 				28348989235A455700839519 /* PersistenceHelper.swift in Sources */,
+				DF7B2F55235A4EAC0092B3DE /* NYTCategories.swift in Sources */,
 				28348974235A423A00839519 /* SettingsViewController.swift in Sources */,
 				0B2D9BE1235A3BB00093C8B1 /* SceneDelegate.swift in Sources */,
 				28348980235A448E00839519 /* NYTAPIClient.swift in Sources */,
