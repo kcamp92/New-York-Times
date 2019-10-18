@@ -1,0 +1,838 @@
+{
+    "kind": "books#volumes",
+    "totalItems": 3799,
+    "items": [
+        {
+            "kind": "books#volume",
+            "id": "6dt_DwAAQBAJ",
+            "etag": "pMjFTfc2ANQ",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/6dt_DwAAQBAJ",
+            "volumeInfo": {
+                "title": "Ninth House",
+                "authors": [
+                    "Leigh Bardugo"
+                ],
+                "publisher": "Flatiron Books",
+                "publishedDate": "2019-10-08",
+                "description": "The mesmerizing adult debut from Leigh Bardugo, a tale of power, privilege, dark magic, and murder set among the Ivy League elite Galaxy “Alex” Stern is the most unlikely member of Yale’s freshman class. Raised in the Los Angeles hinterlands by a hippie mom, Alex dropped out of school early and into a world of shady drug-dealer boyfriends, dead-end jobs, and much, much worse. In fact, by age twenty, she is the sole survivor of a horrific, unsolved multiple homicide. Some might say she’s thrown her life away. But at her hospital bed, Alex is offered a second chance: to attend one of the world’s most prestigious universities on a full ride. What’s the catch, and why her? Still searching for answers, Alex arrives in New Haven tasked by her mysterious benefactors with monitoring the activities of Yale’s secret societies. Their eight windowless “tombs” are the well-known haunts of the rich and powerful, from high-ranking politicos to Wall Street’s biggest players. But their occult activities are more sinister and more extraordinary than any paranoid imagination might conceive. They tamper with forbidden magic. They raise the dead. And, sometimes, they prey on the living.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250313089"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250313082"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 448,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "averageRating": 5.0,
+                "ratingsCount": 2,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.4.4.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=6dt_DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=6dt_DwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=6dt_DwAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=1&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=6dt_DwAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=6dt_DwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 14.99,
+                    "currencyCode": "USD"
+                },
+                "retailPrice": {
+                    "amount": 14.99,
+                    "currencyCode": "USD"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=6dt_DwAAQBAJ&rdid=book-6dt_DwAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 1.499E7,
+                            "currencyCode": "USD"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 1.499E7,
+                            "currencyCode": "USD"
+                        },
+                        "giftable": true
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Ninth_House-sample-epub.acsm?id=6dt_DwAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=6dt_DwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "The mesmerizing adult debut from Leigh Bardugo, a tale of power, privilege, dark magic, and murder set among the Ivy League elite Galaxy “Alex” Stern is the most unlikely member of Yale’s freshman class."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "vZaFDwAAQBAJ",
+            "etag": "rt7n5FQ4aF4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/vZaFDwAAQBAJ",
+            "volumeInfo": {
+                "title": "King of Scars",
+                "authors": [
+                    "Leigh Bardugo"
+                ],
+                "publisher": "Imprint",
+                "publishedDate": "2019-01-29",
+                "description": "The Grishaverse will be coming to Netflix soon with Shadow and Bone, an original series! Face your demons...or feed them. Nikolai Lantsov has always had a gift for the impossible. No one knows what he endured in his country’s bloody civil war—and he intends to keep it that way. Now, as enemies gather at his weakened borders, the young king must find a way to refill Ravka’s coffers, forge new alliances, and stop a rising threat to the once-great Grisha Army. Yet with every day a dark magic within him grows stronger, threatening to destroy all he has built. With the help of a young monk and a legendary Grisha Squaller, Nikolai will journey to the places in Ravka where the deepest magic survives to vanquish the terrible legacy inside him. He will risk everything to save his country and himself. But some secrets aren’t meant to stay buried—and some wounds aren’t meant to heal. Enter the Grishaverse with this new novel from #1 New York Times-bestselling author Leigh Bardugo. An Imprint Book \"Deadly clever political intrigue, heart-stopping adventure, memorable characters, and several understated, hinted-at romances (how will we wait?!) come together in one glorious, Slavic-folklore infused package. Bardugo's star continues to rise.\" —Booklist, starred review Praise for the Grishaverse “A master of fantasy.” — The Huffington Post “Utterly, extremely bewitching.” —The Guardian “The best magic universe since Harry Potter.” —Bustle “This is what fantasy is for.” —The New York Times Book Review “[A] world that feels real enough to have its own passport stamp.” —NPR “The darker it gets for the good guys, the better.” —Entertainment Weekly “Sultry, sweeping and picturesque. . . . Impossible to put down.” —USA Today “There’s a level of emotional and historical sophistication within Bardugo’s original epic fantasy that sets it apart.” —Vanity Fair “Unlike anything I’ve ever read.” —Veronica Roth, bestselling author of Divergent “Bardugo crafts a first-rate adventure, a poignant romance, and an intriguing mystery!” —Rick Riordan, bestselling author of the Percy Jackson series “This is a great choice for teenage fans of George R.R. Martin and J.R.R. Tolkien.” —RT Book Reviews A Junior Library Guild Selection",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250142283"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250142288"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 528,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction"
+                ],
+                "averageRating": 4.5,
+                "ratingsCount": 8,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=vZaFDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=vZaFDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=vZaFDwAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=2&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=vZaFDwAAQBAJ&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/King_of_Scars.html?hl=&id=vZaFDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=vZaFDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "But some secrets aren’t meant to stay buried—and some wounds aren’t meant to heal. Enter the Grishaverse with this new novel from #1 New York Times-bestselling author Leigh Bardugo."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "rmNvxQEACAAJ",
+            "etag": "HVlbM/E7fNs",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/rmNvxQEACAAJ",
+            "volumeInfo": {
+                "title": "Nigel of the Ninth House",
+                "subtitle": "Book One: On Earth as it Is in Heaven",
+                "authors": [
+                    "Q Artimus Hedgepeth"
+                ],
+                "publisher": "Independently Published",
+                "publishedDate": "2019-05",
+                "description": "Coping with an unexplained pregnancy, Marci found herself sitting in her Livingroom with a strange man, named Kruba Oza, with news of her fate and that of her unborn child. Nigel of the Ninth House is the first book in a series that chronicles the life of an extraordinary little boy as he ascends to his rightful place as god-king; ruler of the Ninth House. It immerses readers in an unfolding sequence of events that begin the moment Kruba Oza reveals Nigel's intergalactic destiny to his mother and follows both he and his mother along their journey all the way to the top of Mount Nebo where the Samnu waits to spirit Nigel deep into the celestial wilderness where the Nine Houses reside.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1096460211"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781096460213"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 266,
+                "printType": "BOOK",
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=rmNvxQEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=rmNvxQEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=rmNvxQEACAAJ&dq=NINTH+HOUSE&hl=&cd=3&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=rmNvxQEACAAJ&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Nigel_of_the_Ninth_House.html?hl=&id=rmNvxQEACAAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "NO_PAGES",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=rmNvxQEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "NONE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Nigel of the Ninth House is the first book in a series that chronicles the life of an extraordinary little boy as he ascends to his rightful place as god-king; ruler of the Ninth House."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "ouBNBAAAQBAJ",
+            "etag": "H2inHD5QZBQ",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/ouBNBAAAQBAJ",
+            "volumeInfo": {
+                "title": "Shadow and Bone",
+                "authors": [
+                    "Leigh Bardugo"
+                ],
+                "publisher": "Macmillan",
+                "publishedDate": "2013-05-07",
+                "description": "Orphaned by the Border Wars, Alina Starkov is taken to become the protegâe of the mysterious Darkling, who trains her to join the magical elite in the belief that she is the Sun Summoner, who can destroy the monsters of the Fold.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250027436"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250027438"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 416,
+                "printType": "BOOK",
+                "categories": [
+                    "Juvenile Fiction"
+                ],
+                "averageRating": 4.0,
+                "ratingsCount": 177,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.0.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=ouBNBAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=ouBNBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=ouBNBAAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=4&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=ouBNBAAAQBAJ&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Shadow_and_Bone.html?hl=&id=ouBNBAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=ouBNBAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "Orphaned by the Border Wars, Alina Starkov is taken to become the protegâe of the mysterious Darkling, who trains her to join the magical elite in the belief that she is the Sun Summoner, who can destroy the monsters of the Fold."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "SFzdDgAAQBAJ",
+            "etag": "q7Ab3fL+qXM",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/SFzdDgAAQBAJ",
+            "volumeInfo": {
+                "title": "The Language of Thorns",
+                "subtitle": "Midnight Tales and Dangerous Magic",
+                "authors": [
+                    "Leigh Bardugo"
+                ],
+                "publisher": "Imprint",
+                "publishedDate": "2017-09-26",
+                "description": "Inspired by myth, fairy tale, and folklore, #1 New York Times-bestselling author Leigh Bardugo has crafted a deliciously atmospheric collection of short stories filled with betrayals, revenge, sacrifice, and love. Enter the Grishaverse... Love speaks in flowers. Truth requires thorns. Travel to a world of dark bargains struck by moonlight, of haunted towns and hungry woods, of talking beasts and gingerbread golems, where a young mermaid's voice can summon deadly storms and where a river might do a lovestruck boy's bidding but only for a terrible price. Perfect for new readers and dedicated fans, the tales in The Language of Thorns will transport you to lands both familiar and strange—to a fully realized world of dangerous magic that millions have visited through the novels of the Grishaverse. This collection of six stories includes three brand-new tales, each of them lavishly illustrated and culminating in stunning full-spread illustrations as rich in detail as the stories themselves. An Imprint Book This title has Common Core connections.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250122537"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250122538"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 304,
+                "printType": "BOOK",
+                "categories": [
+                    "Young Adult Fiction"
+                ],
+                "averageRating": 4.0,
+                "ratingsCount": 13,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=SFzdDgAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=SFzdDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=SFzdDgAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=5&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=SFzdDgAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=SFzdDgAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 9.99,
+                    "currencyCode": "USD"
+                },
+                "retailPrice": {
+                    "amount": 9.99,
+                    "currencyCode": "USD"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=SFzdDgAAQBAJ&rdid=book-SFzdDgAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 9990000.0,
+                            "currencyCode": "USD"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 9990000.0,
+                            "currencyCode": "USD"
+                        },
+                        "giftable": true
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/The_Language_of_Thorns-sample-epub.acsm?id=SFzdDgAAQBAJ&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=SFzdDgAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "This collection of six stories includes three brand-new tales, each of them lavishly illustrated and culminating in stunning full-spread illustrations as rich in detail as the stories themselves."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "GiiJDAAAQBAJ",
+            "etag": "/l2oqDJBDI4",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/GiiJDAAAQBAJ",
+            "volumeInfo": {
+                "title": "Night of the Ninth Dragon",
+                "authors": [
+                    "Mary Pope Osborne"
+                ],
+                "publisher": "Random House Books for Young Readers",
+                "publishedDate": "2016",
+                "description": "Magic Tree House is the #1 bestselling chapter book series! In their NEW adventure, Jack and Annie return to Camelot! In this thrilling adventure steeped in history, Mary Pope Osborne introduces readers to classic Welsh legends and continues her own story of King Arthur, Merlin, and the Knights of the Round Table. Have more fun with Jack and Annie on the Magic Tree House website at MagicTreeHouse.com!",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780553510898"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0553510894"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 144,
+                "printType": "BOOK",
+                "categories": [
+                    "JUVENILE FICTION"
+                ],
+                "averageRating": 4.0,
+                "ratingsCount": 1,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.2.0.0.preview.0",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=GiiJDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=GiiJDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=GiiJDAAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=6&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=GiiJDAAAQBAJ&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Night_of_the_Ninth_Dragon.html?hl=&id=GiiJDAAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=GiiJDAAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "In this thrilling adventure steeped in history, Mary Pope Osborne introduces readers to classic Welsh legends and continues her own story of King Arthur, Merlin, and the Knights of the Round Table."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "HHJwDwAAQBAJ",
+            "etag": "SOavH7ZKJ1E",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/HHJwDwAAQBAJ",
+            "volumeInfo": {
+                "title": "Gideon the Ninth",
+                "authors": [
+                    "Tamsyn Muir"
+                ],
+                "publisher": "Tor.com",
+                "publishedDate": "2019-09-10",
+                "description": "“Unlike anything I’ve ever read. ” —V.E. Schwab “Lesbian necromancers explore a haunted gothic palace in space!” —Charles Stross The Emperor needs necromancers. The Ninth Necromancer needs a swordswoman. Gideon has a sword, some dirty magazines, and no more time for undead nonsense. Tamsyn Muir’s Gideon the Ninth unveils a solar system of swordplay, cut-throat politics, and lesbian necromancers. Her characters leap off the page, as skillfully animated as arcane revenants. The result is a heart-pounding epic science fantasy. Brought up by unfriendly, ossifying nuns, ancient retainers, and countless skeletons, Gideon is ready to abandon a life of servitude and an afterlife as a reanimated corpse. She packs up her sword, her shoes, and her dirty magazines, and prepares to launch her daring escape. But her childhood nemesis won’t set her free without a service. Harrowhark Nonagesimus, Reverend Daughter of the Ninth House and bone witch extraordinaire, has been summoned into action. The Emperor has invited the heirs to each of his loyal Houses to a deadly trial of wits and skill. If Harrowhark succeeds she will be become an immortal, all-powerful servant of the Resurrection, but no necromancer can ascend without their cavalier. Without Gideon’s sword, Harrow will fail, and the Ninth House will die. Of course, some things are better left dead. At the Publisher's request, this title is being sold without Digital Rights Management Software (DRM) applied.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9781250313171"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "1250313171"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 448,
+                "printType": "BOOK",
+                "categories": [
+                    "Fiction"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.2.2.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=HHJwDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=HHJwDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=HHJwDwAAQBAJ&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=7&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=HHJwDwAAQBAJ&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=HHJwDwAAQBAJ"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 13.99,
+                    "currencyCode": "USD"
+                },
+                "retailPrice": {
+                    "amount": 13.99,
+                    "currencyCode": "USD"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=HHJwDwAAQBAJ&rdid=book-HHJwDwAAQBAJ&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 1.399E7,
+                            "currencyCode": "USD"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 1.399E7,
+                            "currencyCode": "USD"
+                        },
+                        "giftable": true
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=HHJwDwAAQBAJ&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "THE LOCKED TOMB TRILOGY BOOK 1: Gideon the Ninth BOOK 2: Harrow the Ninth BOOK 3: Alecto the Ninth At the Publisher&#39;s request, this title is being sold without Digital Rights Management Software (DRM) applied."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "hcQ5YpsW6UwC",
+            "etag": "1r8MTq4Ac6Q",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/hcQ5YpsW6UwC",
+            "volumeInfo": {
+                "title": "Ninth Ward",
+                "authors": [
+                    "Jewell Parker Rhodes"
+                ],
+                "publisher": "Little, Brown Books for Young Readers",
+                "publishedDate": "2010-08-16",
+                "description": "From New York Times bestselling and award-winning author Jewell Parker Rhodes comes a heartbreaking and uplifting tale of survival in the face of Hurricane Katrina. Twelve-year-old Lanesha lives in a tight-knit community in New Orleans' Ninth Ward. She doesn't have a fancy house like her uptown family or lots of friends like the other kids on her street. But what she does have is Mama Ya-Ya, her fiercely loving caretaker, wise in the ways of the world and able to predict the future. So when Mama Ya-Ya's visions show a powerful hurricane--Katrina--fast approaching, it's up to Lanesha to call upon the hope and strength Mama Ya-Ya has given her to help them both survive the storm. From the New York Times bestselling author of Ghost Boys and Towers Falling, Ninth Ward is a deeply emotional story about transformation and a celebration of resilience, friendship, and family--as only love can define it.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0316088412"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780316088411"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": false
+                },
+                "pageCount": 224,
+                "printType": "BOOK",
+                "categories": [
+                    "Juvenile Fiction"
+                ],
+                "averageRating": 4.0,
+                "ratingsCount": 33,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": true,
+                "contentVersion": "1.4.5.0.preview.2",
+                "panelizationSummary": {
+                    "containsEpubBubbles": false,
+                    "containsImageBubbles": false
+                },
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=hcQ5YpsW6UwC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=hcQ5YpsW6UwC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=hcQ5YpsW6UwC&printsec=frontcover&dq=NINTH+HOUSE&hl=&cd=8&source=gbs_api",
+                "infoLink": "https://play.google.com/store/books/details?id=hcQ5YpsW6UwC&source=gbs_api",
+                "canonicalVolumeLink": "https://play.google.com/store/books/details?id=hcQ5YpsW6UwC"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "FOR_SALE",
+                "isEbook": true,
+                "listPrice": {
+                    "amount": 6.99,
+                    "currencyCode": "USD"
+                },
+                "retailPrice": {
+                    "amount": 6.99,
+                    "currencyCode": "USD"
+                },
+                "buyLink": "https://play.google.com/store/books/details?id=hcQ5YpsW6UwC&rdid=book-hcQ5YpsW6UwC&rdot=1&source=gbs_api",
+                "offers": [
+                    {
+                        "finskyOfferType": 1,
+                        "listPrice": {
+                            "amountInMicros": 6990000.0,
+                            "currencyCode": "USD"
+                        },
+                        "retailPrice": {
+                            "amountInMicros": 6990000.0,
+                            "currencyCode": "USD"
+                        },
+                        "giftable": true
+                    }
+                ]
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": false,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Ninth_Ward-sample-epub.acsm?id=hcQ5YpsW6UwC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=hcQ5YpsW6UwC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "From the New York Times bestselling author of Ghost Boys and Towers Falling, Ninth Ward is a deeply emotional story about transformation and a celebration of resilience, friendship, and family--as only love can define it."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "HHFSxhkmBmYC",
+            "etag": "x37JdJH0j4Y",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/HHFSxhkmBmYC",
+            "volumeInfo": {
+                "title": "Eclipse Interpretation Manual",
+                "authors": [
+                    "Rose Lineman"
+                ],
+                "publisher": "American Federation of Astr",
+                "publishedDate": "2000-09-01",
+                "description": "The eclipse is viewed as part of a sequence. Its initial influences are described along with the meanings of the solar & lunar eclipses in the signs & houses, & their aspects to the planets. The author covers the meaning of the Moon's Nodes & the importance of the eclipses when falling on any of the four angles. Her delineation techniques are clearly explained.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780866903011"
+                    },
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0866903011"
+                    }
+                ],
+                "readingModes": {
+                    "text": true,
+                    "image": true
+                },
+                "pageCount": 168,
+                "printType": "BOOK",
+                "categories": [
+                    "Body, Mind & Spirit"
+                ],
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "0.1.2.0.preview.3",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=HHFSxhkmBmYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=HHFSxhkmBmYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=HHFSxhkmBmYC&pg=PA46&dq=NINTH+HOUSE&hl=&cd=9&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=HHFSxhkmBmYC&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/Eclipse_Interpretation_Manual.html?hl=&id=HHFSxhkmBmYC"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": true,
+                    "acsTokenLink": "http://books.google.com/books/download/Eclipse_Interpretation_Manual-sample-epub.acsm?id=HHFSxhkmBmYC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api"
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=HHFSxhkmBmYC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "With an eighth house lunar eclipse/second house solar eclipse arrangement, <br>\none&#39;s sensitivity to eighth house affairs and the ... Lunar Eclipse in the Natal <b>Ninth</b> <br>\n<b>House</b>; When a lunar eclipse activates the <b>ninth house</b>, one tends to turn toward<br>\n&nbsp;..."
+            }
+        },
+        {
+            "kind": "books#volume",
+            "id": "0OJgX88KKMsC",
+            "etag": "UNCEz6OJ1XA",
+            "selfLink": "https://www.googleapis.com/books/v1/volumes/0OJgX88KKMsC",
+            "volumeInfo": {
+                "title": "The Art of Predictive Astrology",
+                "subtitle": "Forecasting Your Life Events",
+                "authors": [
+                    "Carol Rushman"
+                ],
+                "publisher": "Llewellyn Worldwide",
+                "publishedDate": "2002-01",
+                "description": "Astrologer Carol Rushman lays out a step-by-step system that astrologers can use to forecast significant events, including love and financial success. When finished with the book, they will be able to predict cycles and trends for the next several years, and give their clients 15 important dates for the coming year.",
+                "industryIdentifiers": [
+                    {
+                        "type": "ISBN_10",
+                        "identifier": "0738701645"
+                    },
+                    {
+                        "type": "ISBN_13",
+                        "identifier": "9780738701646"
+                    }
+                ],
+                "readingModes": {
+                    "text": false,
+                    "image": false
+                },
+                "pageCount": 272,
+                "printType": "BOOK",
+                "categories": [
+                    "Business & Economics"
+                ],
+                "averageRating": 4.0,
+                "ratingsCount": 3,
+                "maturityRating": "NOT_MATURE",
+                "allowAnonLogging": false,
+                "contentVersion": "preview-1.0.0",
+                "imageLinks": {
+                    "smallThumbnail": "http://books.google.com/books/content?id=0OJgX88KKMsC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
+                    "thumbnail": "http://books.google.com/books/content?id=0OJgX88KKMsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
+                },
+                "language": "en",
+                "previewLink": "http://books.google.com/books?id=0OJgX88KKMsC&pg=PA222&dq=NINTH+HOUSE&hl=&cd=10&source=gbs_api",
+                "infoLink": "http://books.google.com/books?id=0OJgX88KKMsC&dq=NINTH+HOUSE&hl=&source=gbs_api",
+                "canonicalVolumeLink": "https://books.google.com/books/about/The_Art_of_Predictive_Astrology.html?hl=&id=0OJgX88KKMsC"
+            },
+            "saleInfo": {
+                "country": "US",
+                "saleability": "NOT_FOR_SALE",
+                "isEbook": false
+            },
+            "accessInfo": {
+                "country": "US",
+                "viewability": "PARTIAL",
+                "embeddable": true,
+                "publicDomain": false,
+                "textToSpeechPermission": "ALLOWED",
+                "epub": {
+                    "isAvailable": false
+                },
+                "pdf": {
+                    "isAvailable": false
+                },
+                "webReaderLink": "http://play.google.com/books/reader?id=0OJgX88KKMsC&hl=&printsec=frontcover&source=gbs_api",
+                "accessViewStatus": "SAMPLE",
+                "quoteSharingAllowed": false
+            },
+            "searchInfo": {
+                "textSnippet": "One year when I had an eclipse in my eighth house conjunct my natal Jupiter, I <br>\nlost my father and three friends to death (Jupiter rules my ... When the lunation or <br>\neclipse is in the <b>ninth house</b>, that is when they will often begin a course of study."
+            }
+        }
+    ]
+}

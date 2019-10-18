@@ -9,6 +9,16 @@
 import Foundation
 struct BestSellersWrapper: Codable {
     let results: [BestSellers]
+    
+    static func getNYTData(from data:Data) -> [BestSellers]? {
+        do {
+            let newbook = try JSONDecoder().decode(BestSellersWrapper.self, from: data)
+            return newbook.results
+        } catch let error {
+            print(error)
+            return nil
+        }
+    }
 }
 
 struct BestSellers: Codable {
