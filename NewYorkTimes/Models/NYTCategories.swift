@@ -7,3 +7,11 @@
 //
 
 import Foundation
+struct CategoryWrapper: Codable {
+    let results:[Category]
+}
+
+struct Category: Codable {
+    let list_name_encoded: String
+    
+}
