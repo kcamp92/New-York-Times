@@ -11,8 +11,8 @@ import Foundation
 // MARK: - Books
 struct CategoryWrapper: Codable {
     
-    let results: [Results]
-    static func getGenreData(from data:Data) -> [Results]? {
+    let results: [Categories]
+    static func getGenreData(from data:Data) -> [Categories]? {
            do {
                let genres = try JSONDecoder().decode(CategoryWrapper.self, from: data)
                return genres.results
@@ -24,7 +24,7 @@ struct CategoryWrapper: Codable {
 }
 
 // MARK: - Result
-struct Results: Codable {
+struct Categories: Codable {
     let  displayName: String
     let listName:String
 

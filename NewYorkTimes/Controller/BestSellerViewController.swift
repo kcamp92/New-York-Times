@@ -10,7 +10,7 @@ import UIKit
 
 class BestSellersViewController: UIViewController {
 var animationRunning = false
-    var genreData = [Results]() {
+    var genreData = [Categories]() {
         didSet {
             settingsPickerView.reloadAllComponents()
             

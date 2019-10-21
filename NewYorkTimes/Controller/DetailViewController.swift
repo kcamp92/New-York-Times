@@ -77,7 +77,7 @@ class DetailViewController: UIViewController {
               // Do any additional setup after loading the view.
           }
     private func loadGoogleBookData() {
-        GoogleBookAPI.shared.getGoogleBookData(isbn10: bookData.isbns[0].isbn10) { (results) in
+        GoogleBookAPI.shared.getGoogleBookData(book: bookData) { (results) in
             switch results {
             case .failure(let error):
                 print(error)
