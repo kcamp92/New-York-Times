@@ -43,7 +43,24 @@ struct Books: Codable {
             return authors[0]
         }
     }
+    
+    
+    func existsInFavorites() -> Bool? {
+        do {
+            let allSavedBooks = try BookPersistenceManager.manager.getFavoriteBook()
+            if allSavedBooks.contains(where: {$0.description == self.description}) {
+                return true
+            } else {
+                return false
+            }
+        } catch {
+            print(error)
+            return nil
+        }
+    }
 }
 struct ImageLinks: Codable {
     let thumbnail: String
 }
+
+

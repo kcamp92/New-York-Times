@@ -38,6 +38,18 @@ struct BestSellers: Codable {
             return " \(weeks) weeks on the best seller list"
         }
     }
+    
+    func getReviewUrl() -> String {
+        let link = amazon_product_url
+
+        let arr1 = link.components(separatedBy: "?")
+
+        let arr2 = arr1[0].components(separatedBy: "/")
+        
+        guard let key = arr2.last else {return link}
+        return "https://www.amazon.com/review/create-review/?ie=UTF8&channel=glance-detail&asin=\(key)"
+       
+    }
 }
 
 struct Isbn: Codable {
