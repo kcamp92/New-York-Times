@@ -38,6 +38,8 @@
 		69FB93D9235A6474000B7786 /* NYTtest.json in Resources */ = {isa = PBXBuildFile; fileRef = 69FB93D8235A6474000B7786 /* NYTtest.json */; };
 		69FB93DB235A6695000B7786 /* googleBooks.json in Resources */ = {isa = PBXBuildFile; fileRef = 69FB93DA235A6695000B7786 /* googleBooks.json */; };
 		DF7B2F55235A4EAC0092B3DE /* NYTCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF7B2F54235A4EAC0092B3DE /* NYTCategories.swift */; };
+		DFAAD218235E072300C3F80B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAAD217235E072300C3F80B /* Secrets.swift */; };
+		DFAAD219235E072300C3F80B /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAAD217235E072300C3F80B /* Secrets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +88,7 @@
 		69FB93D8235A6474000B7786 /* NYTtest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NYTtest.json; sourceTree = "<group>"; };
 		69FB93DA235A6695000B7786 /* googleBooks.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = googleBooks.json; sourceTree = "<group>"; };
 		DF7B2F54235A4EAC0092B3DE /* NYTCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTCategories.swift; sourceTree = "<group>"; };
+		DFAAD217235E072300C3F80B /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 		0B2D9BD2235A3BB00093C8B1 = {
 			isa = PBXGroup;
 			children = (
+				DFAAD217235E072300C3F80B /* Secrets.swift */,
 				0B2D9BDD235A3BB00093C8B1 /* NewYorkTimes */,
 				0B2D9BF4235A3BB20093C8B1 /* NewYorkTimesTests */,
 				0B2D9BDC235A3BB00093C8B1 /* Products */,
@@ -132,7 +136,6 @@
 				2834899B235A46CA00839519 /* Views */,
 				28348996235A461C00839519 /* Models */,
 				28348975235A43E700839519 /* Controller */,
-				2834898A235A459C00839519 /* Secrets */,
 				2834897A235A448E00839519 /* Networking */,
 				2834898F235A45CD00839519 /* UserDefaults */,
 				28348985235A455700839519 /* Persistence */,
@@ -189,6 +192,7 @@
 			path = Persistence;
 			sourceTree = "<group>";
 		};
+
 		2834898A235A459C00839519 /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +201,7 @@
 			path = Secrets;
 			sourceTree = "<group>";
 		};
+
 		2834898F235A45CD00839519 /* UserDefaults */ = {
 			isa = PBXGroup;
 			children = (
@@ -346,7 +351,9 @@
 				691FE748235AB51B0096DA7A /* GenreListAPI.swift in Sources */,
 				DF7B2F55235A4EAC0092B3DE /* NYTCategories.swift in Sources */,
 				28348974235A423A00839519 /* SettingsViewController.swift in Sources */,
+
 				2834AD6E235DF82100CE9F00 /* Secrets.swift in Sources */,
+
 				0B2D9BE1235A3BB00093C8B1 /* SceneDelegate.swift in Sources */,
 				28348980235A448E00839519 /* NYTAPIClient.swift in Sources */,
 				28348995235A460E00839519 /* Favorites.swift in Sources */,
@@ -363,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B2D9BF6235A3BB20093C8B1 /* NewYorkTimesTests.swift in Sources */,
+				DFAAD219235E072300C3F80B /* Secrets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
