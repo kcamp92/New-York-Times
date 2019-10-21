@@ -11,8 +11,18 @@ import Foundation
 class GoogleBookAPI {
     static let shared = GoogleBookAPI()
     
-    func getGoogleBookData(isbn10:String,completionHandler:@escaping(Result<[Items],AppError>)-> Void) {
-        let url = "https://www.googleapis.com/books/v1/volumes?q=+isbn:\(isbn10)&key=AIzaSyBQ_TfDLtpJUwd6ZPumogW6eREP3VW5PKw"
+    
+    
+    func getGoogleBookData(book:BestSellers,completionHandler:@escaping(Result<[Items],AppError>)-> Void) {
+        var correctUrl = ""
+        if book.isbns.count == 0 {
+            correctUrl = book.book_details[0].getFormattedTitle()
+            print(correctUrl)
+        } else {
+            correctUrl = "+isbn:\(book.isbns[0].isbn10)"
+        }
+        
+        let url = "https://www.googleapis.com/books/v1/volumes?q=\(correctUrl)&key=AIzaSyBQ_TfDLtpJUwd6ZPumogW6eREP3VW5PKw"
         
         guard let urlStr = URL(string: url) else {
             completionHandler(.failure(.badURL))

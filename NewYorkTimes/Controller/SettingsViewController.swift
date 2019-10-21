@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-    var settings = [Results]() {
+    var settings = [Categories]() {
         didSet {
             genrePickerView.reloadAllComponents()
         }

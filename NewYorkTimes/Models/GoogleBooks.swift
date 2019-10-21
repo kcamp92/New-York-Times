@@ -38,7 +38,7 @@ struct Books: Codable {
         case 2:
             return "\(authors[0]) and \(authors[1])"
         case 3:
-            return "\(authors[0]), \(authors[1]) and \(authors[0])"
+            return "\(authors[0]), \(authors[1]) and \(authors[2])"
         default:
             return authors[0]
         }
