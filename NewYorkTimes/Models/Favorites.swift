@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import UIKit
+
+struct FavoritesModel:Codable {
+    var imageData:Data
+    var authorName:String
+    var description:String
+    
+}

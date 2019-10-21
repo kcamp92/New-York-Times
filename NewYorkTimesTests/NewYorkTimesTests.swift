@@ -13,6 +13,7 @@ class NewYorkTimesTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
+   
     }
 
     override func tearDown() {
@@ -30,5 +31,67 @@ class NewYorkTimesTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    private func nytBookModel() -> Data? {
+            let bundle = Bundle(for: type(of: self))
+            guard let pathToData = bundle.path(forResource: "NYTtest", ofType: ".json")  else {
+                XCTFail("couldn't find Json")
+                return nil
+            }
+            let url = URL(fileURLWithPath: pathToData)
+            do {
+                let data = try Data(contentsOf: url)
+                return data
+            } catch let error {
+                fatalError("couldn't find data \(error)")
+            }
+        }
 
+        func testNYTBookModel () {
+            let data = nytBookModel() ?? Data()
+            let bookdata = BestSellersWrapper.getNYTData(from: data) ?? []
+            XCTAssertTrue(bookdata.count > 0, "No book was loaded")
+    }
+    
+    private func googleBookModel() -> Data? {
+             let bundle = Bundle(for: type(of: self))
+             guard let pathToData = bundle.path(forResource: "googleBooks", ofType: ".json")  else {
+                 XCTFail("couldn't find Json")
+                 return nil
+             }
+             let url = URL(fileURLWithPath: pathToData)
+             do {
+                 let data = try Data(contentsOf: url)
+                 return data
+             } catch let error {
+                 fatalError("couldn't find data \(error)")
+             }
+         }
+
+         func testgoogleBookModel () {
+             let data = googleBookModel() ?? Data()
+            let bookdata = BookWrapper.getGoogleBookData(from: data) ?? []
+            XCTAssertTrue(bookdata.count > 0, "No book was loaded")
+     }
+    private func getGenreList() -> Data? {
+               let bundle = Bundle(for: type(of: self))
+               guard let pathToData = bundle.path(forResource: "genreList", ofType: ".json")  else {
+                   XCTFail("couldn't find Json")
+                   return nil
+               }
+               let url = URL(fileURLWithPath: pathToData)
+               do {
+                   let data = try Data(contentsOf: url)
+                   return data
+               } catch let error {
+                   fatalError("couldn't find data \(error)")
+               }
+           }
+
+           func testGenreList() {
+        
+               let data = getGenreList() ?? Data()
+            let genreData = CategoryWrapper.getGenreData(from: data) ?? []
+            print(genreData)
+              XCTAssertTrue(genreData.count > 0, "No genre data was loaded")
+       }
 }
