@@ -19,7 +19,7 @@ class FavoritesViewController: UIViewController {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 350, height: 350)
+        layout.itemSize = CGSize(width: 350, height: 300)
         cv.register(FavoritesCollectionViewCell.self, forCellWithReuseIdentifier: RegisterCollectionViews.favoritesCollectionView.rawValue)
         cv.delegate = self
         cv.dataSource = self
@@ -33,11 +33,12 @@ class FavoritesViewController: UIViewController {
              view.backgroundColor = .white
         favoritesConstraints()
         loadFavoritesData()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-   
+        introAlert()
         // Do any additional setup after loading the view.
     }
     
@@ -64,18 +65,13 @@ class FavoritesViewController: UIViewController {
     
     private func loadFavoritesData() {
         do {
-            let favoritedBooks = try BookPersistenceManager.manager.getFavoriteBook()
-            if favoritedBooks.count == 0 {
+            self.favorites = try BookPersistenceManager.manager.getFavoriteBook()
+            if self.favorites.count == 0 {
                 checkIfAnythingHasBeenFavorited()
-            } else {
-                self.favorites = favoritedBooks
-                introAlert()
             }
         } catch {
-            introAlert()
             print(error)
         }
-        
     }
    
     private func checkIfAnythingHasBeenFavorited() {
@@ -98,6 +94,7 @@ extension FavoritesViewController:UICollectionViewDelegate,UICollectionViewDataS
         let favs = favorites[indexPath.row]
         let cell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: RegisterCollectionViews.favoritesCollectionView.rawValue, for: indexPath) as! FavoritesCollectionViewCell
         cell.configureCell(with: favs)
+
         return cell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -111,16 +108,10 @@ extension FavoritesViewController:FavoriteCellDelegate {
         
             let alert = UIAlertController(title: "Options", message: "", preferredStyle: .actionSheet)
             let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
-                switch tag {
-              
-                case 1:
-                    try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
-                                     self.favorites.remove(at: tag)
-                    self.checkIfAnythingHasBeenFavorited()
-                default:
-                                  try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
-                                  self.favorites.remove(at: tag)
-                }
+                
+                 try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
+                                                self.favorites.remove(at: tag)
+                                    self.loadFavoritesData()
                 
 
             }
@@ -130,6 +121,6 @@ extension FavoritesViewController:FavoriteCellDelegate {
             present(alert,animated: true)
         }
     
-    
+    //test commit here
     
 }
