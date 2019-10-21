@@ -7,11 +7,29 @@
 //
 
 import Foundation
+
+// MARK: - Books
 struct CategoryWrapper: Codable {
-    let results:[Category]
+    
+    let results: [Results]
+    static func getGenreData(from data:Data) -> [Results]? {
+           do {
+               let genres = try JSONDecoder().decode(CategoryWrapper.self, from: data)
+               return genres.results
+           } catch let error {
+               print(error)
+               return nil
+           }
+       }
 }
 
-struct Category: Codable {
-    let list_name_encoded: String
-    
+// MARK: - Result
+struct Results: Codable {
+    let  displayName: String
+    let listName:String
+
+    enum CodingKeys: String, CodingKey {
+        case displayName = "display_name"
+       case listName = "list_name_encoded"
+    }
 }

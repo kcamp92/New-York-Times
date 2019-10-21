@@ -25,6 +25,19 @@ struct BestSellers: Codable {
     let weeks_on_list: Int
     let isbns: [Isbn]
     let book_details: [BookDetails]
+    let amazon_product_url:String
+    
+    
+    func returnWeeksOnlistAsString(weeks:Int) -> String {
+        switch weeks {
+        case 0:
+            return "First week on the best seller list"
+        case 1:
+            return "\(weeks) week on the best seller list"
+        default:
+            return " \(weeks) weeks on the best seller list"
+        }
+    }
 }
 
 struct Isbn: Codable {

@@ -17,6 +17,7 @@ class NYTAPIClient {
         
         let url = "https://api.nytimes.com/svc/books/v3/lists.json?api-key=\(Secrets.nytAuthorBestSeller)&list=\(genre.replacingOccurrences(of: " ", with: "-"))"
         guard let urlStr = URL(string: url) else {
+            completionHandler(.failure(.badURL))
             return
         }
         NetworkHelper.manager.performDataTask(withUrl: urlStr, andMethod: .get) { (results) in
@@ -26,9 +27,9 @@ class NYTAPIClient {
             case .success(let data):
                 do {
                    let bookData = try JSONDecoder().decode(BestSellersWrapper.self, from: data)
-                    completionHandler(.success(bookData.results))
+                    completionHandler(.success(bookData.results.sorted(by: {$0.weeks_on_list < $1.weeks_on_list})))
                 } catch {
-                completionHandler(.failure(.badURL))
+                completionHandler(.failure(.invalidJSONResponse))
             }
         }
     }
