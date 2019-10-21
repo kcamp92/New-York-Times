@@ -128,7 +128,7 @@ var animationRunning = false
             currentRow = 1
         } else {
             listedCurrentGenre = UserDefaultsWrapper.shared.getListedGenre()!
-            displayCurrentGenre = UserDefaultsWrapper.shared.getDisplayGenre() ?? "test"
+            displayCurrentGenre = UserDefaultsWrapper.shared.getDisplayGenre() ?? "Combined Print & E-Book Fiction"
             
             currentRow = UserDefaultsWrapper.shared.getCurrentRow()!
             

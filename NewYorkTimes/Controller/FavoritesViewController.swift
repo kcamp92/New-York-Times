@@ -15,6 +15,8 @@ class FavoritesViewController: UIViewController {
             favoriteCollectionView.reloadData()
         }
     }
+    
+    
     lazy var favoriteCollectionView:UICollectionView = {
         let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
         let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
@@ -38,8 +40,12 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        introAlert()
-        // Do any additional setup after loading the view.
+        DispatchQueue.main.async {
+            if self.favorites.count != 0 {
+                self.introAlert()
+            }
+        }
+        
     }
     
     private func favoritesConstraints() {
@@ -54,7 +60,8 @@ class FavoritesViewController: UIViewController {
     }
     
     
-    func introAlert() {
+    
+    private func introAlert() {
         let alert = UIAlertController(title: "Favorites", message: "Click to delete or add to Amazon", preferredStyle: .alert)
         let dismiss = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
         alert.addAction(dismiss)
@@ -80,6 +87,7 @@ class FavoritesViewController: UIViewController {
                self.tabBarController?.selectedIndex = 0
                
            }
+        
                alert.addAction(dismissAlert)
            present(alert,animated: true)
           
@@ -115,9 +123,19 @@ extension FavoritesViewController:FavoriteCellDelegate {
                 
 
             }
+        
+            let amazon = UIAlertAction(title: "See On Amazon", style: .default) { (action) in
+                guard let urlStr = URL(string:self.favorites[tag].amazonUrl) else {return}
+                       
+                       UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+                   }
+
+        
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
             alert.addAction(delete)
             alert.addAction(cancel)
+            alert.addAction(amazon)
+           
             present(alert,animated: true)
         }
     
