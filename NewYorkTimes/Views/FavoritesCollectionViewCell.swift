@@ -10,7 +10,6 @@ import UIKit
 
 protocol FavoriteCellDelegate:AnyObject {
     func actionSheet(tag:Int)
-    
 }
 
 class FavoritesCollectionViewCell: UICollectionViewCell {
@@ -33,7 +32,6 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
     
     lazy var descriptionTextView: UITextView = {
         let textView = UITextView()
-        textView.isScrollEnabled = false
         textView.isEditable = false
         textView.backgroundColor = #colorLiteral(red: 0.9330009818, green: 0.9096471667, blue: 0.8983025551, alpha: 1)
         textView.contentMode = .center
@@ -51,6 +49,7 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         addViews()
         configureConstraints()
+        self.layer.cornerRadius = 20
     }
        private func addViews() {
            self.contentView.addSubview(bookImageView)
@@ -86,6 +85,8 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
 //
 //               descriptionTextView.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
 //               descriptionTextView.topAnchor.constraint(equalTo: weeksOnTopLabel.bottomAnchor, constant: 30),
+            
+            
             bookImageView.topAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.topAnchor,constant: 10),
             bookImageView.centerXAnchor.constraint(equalTo: self.contentView.safeAreaLayoutGuide.centerXAnchor),
             bookImageView.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.5),
@@ -96,7 +97,8 @@ class FavoritesCollectionViewCell: UICollectionViewCell {
             authorName.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
             descriptionTextView.topAnchor.constraint(equalTo: authorName.bottomAnchor),
             descriptionTextView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            descriptionTextView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor)
+            descriptionTextView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            descriptionTextView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor, constant: -10)
             
              
            ])
