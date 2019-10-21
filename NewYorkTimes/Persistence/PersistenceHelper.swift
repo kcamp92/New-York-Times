@@ -21,6 +21,9 @@ struct PersistenceHelper<T: Codable> {
         elements.insert(newElement, at: 0)
         try replace(elements: elements)
     }
+    func saveArray(newElement:[T]) throws {
+        try replace(elements: newElement)
+    }
     
     func replace(elements: [T]) throws {
         let serializedData = try PropertyListEncoder().encode(elements)
