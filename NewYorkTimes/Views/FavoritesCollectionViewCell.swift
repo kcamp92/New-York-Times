@@ -1,15 +1,19 @@
 //
-//  BestSellerCollectionViewCell.swift
+//  FavoritesCollectionViewCell.swift
 //  NewYorkTimes
 //
-//  Created by Michelle Cueva on 10/18/19.
+//  Created by Phoenix McKnight on 10/19/19.
 //  Copyright © 2019 Krystal Campbell. All rights reserved.
 //
 
 import UIKit
 
-class BestSellerCollectionViewCell: UICollectionViewCell {
+protocol FavoriteCellDelegate:AnyObject {
+    func actionSheet(tag:Int)
     
+}
+
+class FavoritesCollectionViewCell: UICollectionViewCell {
     
     lazy var bookImageView: UIImageView = {
            let image = UIImageView()
@@ -18,7 +22,7 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
            return image
     }()
     
-    lazy var weeksOnTopLabel: UILabel = {
+    lazy var authorName: UILabel = {
            let label = UILabel()
            label.numberOfLines = 2
            label.textAlignment = .center
@@ -38,8 +42,8 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
     
     var changeColorOfBorderCellFunction: (()->()) = {}
 
-    var googleBookFunction: (()->()) = {}
-
+    weak var delegate:FavoriteCellDelegate?
+    
     required init?(coder: NSCoder) {
            fatalError("init(coder:) has not been implemented")
        }
@@ -50,23 +54,22 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
     }
        private func addViews() {
            self.contentView.addSubview(bookImageView)
-           self.contentView.addSubview(weeksOnTopLabel)
+           self.contentView.addSubview(authorName)
            self.contentView.addSubview(descriptionTextView)
 
            
        }
-    public func configureCell(with bestSellers:BestSellers ,collectionView:UICollectionView,index:Int) {
-        weeksOnTopLabel.text = bestSellers.returnWeeksOnlistAsString(weeks: bestSellers.weeks_on_list)
-           bookImageView.image = UIImage(named: "bookPlaceHolder")
-        descriptionTextView.text = bestSellers.book_details[0].description
-           //self.collectionView = collectionView
-           //self.index = index
+    public func configureCell(with favoriteBook:FavoritesModel) {
+        authorName.text = favoriteBook.authorName
+        bookImageView.image = UIImage(data: favoriteBook.imageData)
+        descriptionTextView.text = favoriteBook.description
+           
         
        }
        
        private func configureConstraints() {
            bookImageView.translatesAutoresizingMaskIntoConstraints = false
-           weeksOnTopLabel.translatesAutoresizingMaskIntoConstraints = false
+           authorName.translatesAutoresizingMaskIntoConstraints = false
           descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
     
            
@@ -88,10 +91,10 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
             bookImageView.heightAnchor.constraint(equalTo: self.contentView.heightAnchor, multiplier: 0.5),
             bookImageView.widthAnchor.constraint(equalTo: self.contentView.widthAnchor, multiplier: 0.4),
             //weeksOnTopLabel.centerXAnchor.constraint(equalTo: self.contentView.centerXAnchor),
-            weeksOnTopLabel.topAnchor.constraint(equalTo: bookImageView.bottomAnchor,constant: 10),
-            weeksOnTopLabel.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
-            weeksOnTopLabel.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
-            descriptionTextView.topAnchor.constraint(equalTo: weeksOnTopLabel.bottomAnchor),
+            authorName.topAnchor.constraint(equalTo: bookImageView.bottomAnchor,constant: 10),
+            authorName.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            authorName.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            descriptionTextView.topAnchor.constraint(equalTo: authorName.bottomAnchor),
             descriptionTextView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
             descriptionTextView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor)
             
@@ -99,3 +102,4 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
            ])
        }
 }
+
