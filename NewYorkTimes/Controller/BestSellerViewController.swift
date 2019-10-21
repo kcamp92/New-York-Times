@@ -260,7 +260,25 @@ var animationRunning = false
             }
             cell.changeColorOfBorderCellFunction()
            
-            
+            GoogleBookAPI.shared.getGoogleBookData(book: bestSelling) { (results) in
+                switch results {
+                case .failure(let error):
+                    print(error)
+                case .success(let data):
+                    if let image = data[0].volumeInfo?.imageLinks.thumbnail {
+                    ImageHelper.shared.getImage(urlStr: image) { (results) in
+                        DispatchQueue.main.async {
+                        switch results {
+                        case .failure(let error):
+                            print(error)
+                        case .success(let imageData):
+                            cell.bookImageView.image = imageData
+                        }
+                    }
+                        }
+                }
+            }
+            }
             
         
             return cell
