@@ -12,15 +12,15 @@ struct GenrePersistenceManager  {
     static let manager = GenrePersistenceManager()
 
    
-    func getGenreList() throws -> [Results] {
+    func getGenreList() throws -> [Categories] {
         return try persistenceHelper.getObjects()
     }
     
-    func save(genreList:[Results]) throws {
+    func save(genreList:[Categories]) throws {
       try persistenceHelper.saveArray(newElement: genreList)
     }
 
-    private let persistenceHelper = PersistenceHelper<Results>(fileName: "genreList.plist")
+    private let persistenceHelper = PersistenceHelper<Categories>(fileName: "genreList.plist")
 
     private init() {}
 }

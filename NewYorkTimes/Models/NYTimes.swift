@@ -47,5 +47,10 @@ struct Isbn: Codable {
 }
 struct BookDetails: Codable {
     let description: String
+    let title: String
+    
+    func getFormattedTitle() -> String {
+        return title.replacingOccurrences(of: " ", with: "-")
+    }
 }
 

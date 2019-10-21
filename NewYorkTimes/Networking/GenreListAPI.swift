@@ -11,7 +11,7 @@ import Foundation
 class GenreListAPIClient {
     static let shared = GenreListAPIClient()
     
-    func getGenreList(completionHandler:@escaping(Result<[Results],AppError>)-> Void) {
+    func getGenreList(completionHandler:@escaping(Result<[Categories],AppError>)-> Void) {
         
         let url = "https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=\(Secrets.nytAuthorBestSeller)"
         guard let urlStr = URL(string: url) else {

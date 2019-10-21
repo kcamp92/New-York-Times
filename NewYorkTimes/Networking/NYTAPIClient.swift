@@ -15,7 +15,7 @@ class NYTAPIClient {
     
     func getBestSellerList(genre:String,completionHandler:@escaping(Result<[BestSellers],AppError>)-> Void) {
         
-        let url = "https://api.nytimes.com/svc/books/v3/lists.json?api-key=\(Secrets.nytAuthorBestSeller)&list=\(genre.replacingOccurrences(of: " ", with: "-"))"
+        let url = "https://api.nytimes.com/svc/books/v3/lists.json?api-key=\(Secrets.nytAuthorBestSeller)&list=\(genre)"
         guard let urlStr = URL(string: url) else {
             completionHandler(.failure(.badURL))
             return
