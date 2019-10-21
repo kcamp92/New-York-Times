@@ -9,6 +9,7 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    
     var settings = [Categories]() {
         didSet {
             genrePickerView.reloadAllComponents()
@@ -31,14 +32,29 @@ class SettingsViewController: UIViewController {
         }
     }
     
-    var genrePickerView:UIPickerView = {
+    var colorChange: RGBValue! 
+    
+    private func changeBackgroundColor() {
+        
+        let rgbColor = RGBValue()
+        self.view.backgroundColor = rgbColor.createRGBColor()
+    }
+    
+    lazy var nyTimesBanner:UIImageView = {
+               
+               let image = UIImageView()
+               image.image = UIImage(named: "NYTBanner")
+               return image
+           }()
+    
+ lazy var genrePickerView:UIPickerView = {
         let pv = UIPickerView()
-        pv.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+       // pv.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         pv.sizeToFit()
         return pv
     }()
     
-    var genreLabel:UILabel = {
+  lazy var genreLabel:UILabel = {
         let gl = UILabel()
         
         gl.textColor = .black
@@ -59,7 +75,8 @@ class SettingsViewController: UIViewController {
          = self
         genrePickerView.dataSource = self
         view.backgroundColor = .white
-setUpConstraints()
+        setUpConstraints()
+        //changeBackgroundColor()
        
         // Do any additional setup after loading the view.
     }
@@ -81,20 +98,32 @@ setUpConstraints()
          settings = try! GenrePersistenceManager.manager.getGenreList()
     }
     private func setUpConstraints() {
-         genrePickerView.translatesAutoresizingMaskIntoConstraints = false
+        nyTimesBanner.translatesAutoresizingMaskIntoConstraints = false
+        genrePickerView.translatesAutoresizingMaskIntoConstraints = false
         genreLabel.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(genreLabel)
         self.view.addSubview(genrePickerView)
+        self.view.addSubview(nyTimesBanner)
         
         NSLayoutConstraint.activate([
-            genreLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 75),
+            
+            nyTimesBanner.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40),
+            nyTimesBanner.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
+            nyTimesBanner.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+            nyTimesBanner.bottomAnchor.constraint(equalTo: self.genreLabel.topAnchor),
+            nyTimesBanner.heightAnchor.constraint(equalToConstant: 100),
+            
+            genreLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 175),
                       genreLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
                        genreLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
                        genreLabel.heightAnchor.constraint(equalToConstant: 50),
-            genrePickerView.topAnchor.constraint(equalTo: genreLabel.bottomAnchor,constant: 10),
+                       
+            genrePickerView.topAnchor.constraint(equalTo: genreLabel.bottomAnchor,constant: 40),
             genrePickerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 50),
             genrePickerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -50),
-            genrePickerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
+            genrePickerView.heightAnchor.constraint(equalToConstant: 400)
+            
+           // genrePickerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
 
 
 
@@ -118,7 +147,7 @@ extension SettingsViewController:UIPickerViewDataSource,UIPickerViewDelegate {
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if settings.count > 0 {
-            
+            changeBackgroundColor()
             displayCurrentGenre = settings[row].displayName
             listedCurrentGenre = settings[row].listName
             currentRow = row
