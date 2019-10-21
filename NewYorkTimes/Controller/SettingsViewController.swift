@@ -21,7 +21,7 @@ class SettingsViewController: UIViewController {
     }
     var displayCurrentGenre:String! {
         didSet {
-             genreLabel.text = "You have selected: \(displayCurrentGenre!.capitalized)"
+             genreLabel.text = "You have selected: \(displayCurrentGenre.capitalized)"
             UserDefaultsWrapper.shared.store(displayNameGenre: self.displayCurrentGenre)
         }
     }
