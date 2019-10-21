@@ -136,7 +136,7 @@ class DetailViewController: UIViewController {
             if let existInFaves = self.googleBook.existsInFavorites() {
                 switch existInFaves {
                 case false:
-                     let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!, amazonUrl: self.bookData.amazon_product_url)
+                    let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!, amazonUrl: self.bookData.amazon_product_url, reviewUrl: self.bookData.getReviewUrl())
                                
                               try? BookPersistenceManager.manager.save(newBook: newFavoriteBook)
                      self.showAlert(if: .no)

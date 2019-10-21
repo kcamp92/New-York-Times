@@ -14,5 +14,5 @@ struct FavoritesModel:Codable {
     var authorName:String
     var description:String
     var amazonUrl:String
-    
+    var reviewUrl: String
 }

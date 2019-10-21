@@ -128,13 +128,20 @@ extension FavoritesViewController:FavoriteCellDelegate {
                 guard let urlStr = URL(string:self.favorites[tag].amazonUrl) else {return}
                        
                        UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
-                   }
+            }
+        
+            let review = UIAlertAction(title: "Leave Review", style: .default) { (action) in
+                guard let urlStr = URL(string:self.favorites[tag].reviewUrl) else {return}
+                       
+                       UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+            }
 
         
             let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(delete)
             alert.addAction(cancel)
             alert.addAction(amazon)
+            alert.addAction(review)
+            alert.addAction(delete)
            
             present(alert,animated: true)
         }
