@@ -56,13 +56,14 @@ var animationRunning = false
         
         //MARK: Outlet Variables
         
-        lazy var initialLabel:UILabel = {
+      lazy var initialLabel:UILabel = {
             let label = UILabel()
             label.textAlignment = .center
             label.font = label.font.withSize(20)
-            label.font = UIFont.boldSystemFont(ofSize: 20)
+           // label.font = UIFont.boldSystemFont(ofSize: 20)
             label.textColor = .black
-            label.text = "NYT Bestsellers"
+            label.font = UIFont(name: "Marker Felt", size: 27.0)
+            label.text = "The NY Times Best Sellers"
             return label
         }()
         
@@ -79,11 +80,11 @@ var animationRunning = false
             var layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
             let colletionView = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout )
             layout.scrollDirection = .horizontal
-            layout.itemSize = CGSize(width: 250, height: 250)
+            layout.itemSize = CGSize(width: 250, height: 300)
             colletionView.register(BestSellerCollectionViewCell.self, forCellWithReuseIdentifier: RegisterCollectionViews.bestSellerCollectionView.rawValue)
             colletionView.dataSource = self
             colletionView.delegate = self
-            colletionView.backgroundColor = .lightGray
+            colletionView.backgroundColor = .clear
             layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
             return colletionView
         }()
@@ -256,7 +257,7 @@ var animationRunning = false
             
            cell.configureCell(with: bestSelling, collectionView: bestSellerCollectionView, index: indexPath.row)
             cell.changeColorOfBorderCellFunction = {
-                CustomLayer.shared.createCustomlayer(layer: cell.layer)
+                CustomLayer.shared.createCustomlayer(layer: cell.layer, shadowOpacity: 0.5)
             }
             cell.changeColorOfBorderCellFunction()
            

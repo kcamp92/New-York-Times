@@ -30,13 +30,13 @@ struct BestSellers: Codable {
     
     func returnWeeksOnlistAsString(weeks:Int) -> String {
         switch weeks {
-        case 0:
-            return "First week on the best seller list"
-        case 1:
-            return "\(weeks) week on the best seller list"
-        default:
-            return " \(weeks) weeks on the best seller list"
-        }
+              case 0:
+                  return "NEW THIS WEEK"
+              case 1:
+                  return "\(weeks) WEEK ON THE LIST"
+              default:
+                  return " \(weeks) WEEKS ON THE LIST"
+              }
     }
     
     func getReviewUrl() -> String {
