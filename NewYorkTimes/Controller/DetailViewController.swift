@@ -9,6 +9,12 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    public enum Saved {
+           case yes
+           case no
+       }
+    
     var bookData:BestSellers! {
         didSet {
             loadGoogleBookData()
@@ -73,6 +79,7 @@ class DetailViewController: UIViewController {
               super.viewDidLoad()
               view.backgroundColor = .white
         setUpConstraints()
+        saveButton.isEnabled = false
            
               // Do any additional setup after loading the view.
           }
@@ -104,25 +111,52 @@ class DetailViewController: UIViewController {
               alert.addAction(cancel)
               present(alert,animated: true)
     }
+    
+    private func showAlert(if saved: Saved) {
+        switch saved {
+            
+        case .yes:
+            let alert = UIAlertController(title: "Sorry", message: "This is already in your favorites", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+        case .no:
+            let alert = UIAlertController(title: "YES!", message: "You have saved \"\(self.googleBook.title)\"", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            present(alert, animated: true, completion: nil)
+       
+    }
+        
+    }
     private func optionsAlert() {
            let alert = UIAlertController(title: "Options", message: "Click 'favorite' to save the current book", preferredStyle: .actionSheet)
+        
+        
            let save = UIAlertAction(title: "Favorite", style: .default) { (action) in
-            let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!)
             
-           try? BookPersistenceManager.manager.save(newBook: newFavoriteBook)
-            let alert2 = UIAlertController(title: "Saved", message: "You have saved TEXT PLACEHOLDER", preferredStyle: .alert)
-            let dismissAction = UIAlertAction(title: "Dimsiss", style: .cancel, handler: nil)
-            
-            alert2.addAction(dismissAction)
-            self.dismiss(animated: false, completion: nil)
-            self.present(alert2,animated: true)
+            if let existInFaves = self.googleBook.existsInFavorites() {
+                switch existInFaves {
+                case false:
+                    let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!, amazonUrl: self.bookData.amazon_product_url, reviewUrl: self.bookData.getReviewUrl())
+                               
+                              try? BookPersistenceManager.manager.save(newBook: newFavoriteBook)
+                     self.showAlert(if: .no)
+                case true:
+                    self.showAlert(if: .yes)
+                    
+                }
+            }
+           
            }
+        
         let amazonAlert = UIAlertAction(title: "See On Amazon", style: .default) { (action) in
             guard let urlStr = URL(string:self.bookData.amazon_product_url) else {return}
             
             UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
         }
-           let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
         alert.addAction(save)
         alert.addAction(cancel)
         alert.addAction(amazonAlert)
@@ -132,6 +166,9 @@ class DetailViewController: UIViewController {
        @objc private func saveButtonAction() {
            optionsAlert()
        }
+    
+   
+        
     private func setUpInfo() {
         ImageHelper.shared.getImage(urlStr: googleBook.imageLinks.thumbnail) { (results) in
             DispatchQueue.main.async {
@@ -140,6 +177,7 @@ class DetailViewController: UIViewController {
                 print(error)
             case .success(let image):
                 self.bookImageView.image = image
+                self.saveButton.isEnabled = true
             }
             }
         }
