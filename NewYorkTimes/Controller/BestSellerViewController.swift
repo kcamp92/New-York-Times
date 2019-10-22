@@ -97,13 +97,7 @@ var animationRunning = false
             return pv
             
         }()
-//        override func viewWillAppear(_ animated: Bool) {
-//            super.viewWillAppear(animated)
-//            checkUserDefaults()
-//            settingsPersistenceHelper()
-//            bestSellerCollectionView.reloadData()
-//
-//        }
+
       
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -118,9 +112,7 @@ var animationRunning = false
             createCityLabelConstraints()
             createCollectionViewOutletConstraints()
             createPickerViewConstraints()
-           
-            
-            //placeHolderAnimation()
+
         }
       
     private func checkUserDefaults() {

@@ -44,12 +44,12 @@ class SettingsViewController: UIViewController {
                
                let image = UIImageView()
                image.image = UIImage(named: "nyTimesBanner")
+        image.contentMode = .scaleAspectFit
                return image
            }()
     
  lazy var genrePickerView:UIPickerView = {
         let pv = UIPickerView()
-       // pv.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         pv.sizeToFit()
         return pv
     }()
@@ -78,9 +78,6 @@ class SettingsViewController: UIViewController {
         genrePickerView.dataSource = self
         view.backgroundColor = .white
         setUpConstraints()
-        //changeBackgroundColor()
-       
-        // Do any additional setup after loading the view.
     }
     
    
@@ -110,18 +107,16 @@ class SettingsViewController: UIViewController {
             
             NSLayoutConstraint.activate([
                 
-                nyTimesBanner.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 100),
-//                nyTimesBanner.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-//                nyTimesBanner.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
+                nyTimesBanner.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 50),
                 nyTimesBanner.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
                 nyTimesBanner.heightAnchor.constraint(equalToConstant: 120),
                 
-                genreLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 250),
+                genreLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 200),
                 genreLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
                 genreLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
                 genreLabel.heightAnchor.constraint(equalToConstant: 100),
                 
-                genrePickerView.topAnchor.constraint(equalTo: genreLabel.bottomAnchor,constant: 20),
+                genrePickerView.topAnchor.constraint(equalTo: genreLabel.bottomAnchor),
                 genrePickerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 50),
                 genrePickerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -50),
                 genrePickerView.heightAnchor.constraint(equalToConstant: 400)
@@ -129,43 +124,7 @@ class SettingsViewController: UIViewController {
             ])
         }
     }
-//    private func setUpConstraints() {
-//        nyTimesBanner.translatesAutoresizingMaskIntoConstraints = false
-//        genrePickerView.translatesAutoresizingMaskIntoConstraints = false
-//        genreLabel.translatesAutoresizingMaskIntoConstraints = false
-//        self.view.addSubview(genreLabel)
-//        self.view.addSubview(genrePickerView)
-//        self.view.addSubview(nyTimesBanner)
-//
-//        NSLayoutConstraint.activate([
-//
-//            nyTimesBanner.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor, constant: 40),
-//            nyTimesBanner.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor, constant: 50),
-//            nyTimesBanner.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor, constant: -50),
-//            nyTimesBanner.bottomAnchor.constraint(equalTo: self.genreLabel.topAnchor),
-//            nyTimesBanner.heightAnchor.constraint(equalToConstant: 100),
-//
-//            genreLabel.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor,constant: 175),
-//                      genreLabel.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor),
-//                       genreLabel.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor),
-//                       genreLabel.heightAnchor.constraint(equalToConstant: 50),
-//
-//            genrePickerView.topAnchor.constraint(equalTo: genreLabel.bottomAnchor,constant: 40),
-//            genrePickerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor,constant: 50),
-//            genrePickerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor,constant: -50),
-//            genrePickerView.heightAnchor.constraint(equalToConstant: 400)
-//
-//           // genrePickerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor)
-//
-//
-//
-//
-//
-//        ])
-//    }
-//
 
-//}
 extension SettingsViewController:UIPickerViewDataSource,UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1

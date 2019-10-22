@@ -103,6 +103,7 @@ extension FavoritesViewController:UICollectionViewDelegate,UICollectionViewDataS
         cell.configureCell(with: favs, collectionView: favoriteCollectionView, index: indexPath.row)
         cell.backgroundColor = #colorLiteral(red: 0.9330009818, green: 0.9096471667, blue: 0.8983025551, alpha: 1)
         cell.delegate = self
+        cell.actionSheetButton.tag = indexPath.row
 //        cell.changeColorOfBorderCellFunction = {
 //            CustomLayer.shared.createCustomlayer(layer: cell.layer)
 //        }
@@ -135,8 +136,12 @@ extension FavoritesViewController:FavoriteCellDelegate {
         let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
             
             try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
+           
+            let cell = self.favoriteCollectionView.cellForItem(at: IndexPath(row: tag, section: 0)) as! FavoritesCollectionViewCell
+            cell.toggle()
             self.favorites.remove(at: tag)
-            self.loadFavoritesData()
+                   
+                 self.loadFavoritesData()
             
             
         }
@@ -162,7 +167,5 @@ extension FavoritesViewController:FavoriteCellDelegate {
         
         present(alert,animated: true)
     }
-    
-    //test commit here
     
 }
