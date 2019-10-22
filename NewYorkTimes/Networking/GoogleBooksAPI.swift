@@ -22,7 +22,7 @@ class GoogleBookAPI {
             correctUrl = "+isbn:\(book.isbns[0].isbn10)"
         }
         
-        let url = "https://www.googleapis.com/books/v1/volumes?q=\(correctUrl)&key=AIzaSyBQ_TfDLtpJUwd6ZPumogW6eREP3VW5PKw"
+        let url = "https://www.googleapis.com/books/v1/volumes?q=\(correctUrl)&key=\(Secrets.googleBookAPIKey)"
         
         guard let urlStr = URL(string: url) else {
             completionHandler(.failure(.badURL))

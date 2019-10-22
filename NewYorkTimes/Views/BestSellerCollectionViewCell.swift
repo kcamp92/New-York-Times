@@ -24,6 +24,7 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
            label.textAlignment = .center
            label.textColor = .black
            label.adjustsFontSizeToFitWidth = true
+        label.font = UIFont(name: "Courier-Bold", size: 18.0)
            return label
     }()
     
@@ -31,8 +32,12 @@ class BestSellerCollectionViewCell: UICollectionViewCell {
         let textView = UITextView()
         textView.isScrollEnabled = false
         textView.isEditable = false
-        textView.backgroundColor = #colorLiteral(red: 0.9330009818, green: 0.9096471667, blue: 0.8983025551, alpha: 1)
         textView.contentMode = .center
+        textView.backgroundColor = .clear
+        textView.font = UIFont(name: "Courier", size: 12.0)
+
+        textView.textAlignment = .center
+               textView.layer.cornerRadius = 20
         return textView
     }()
     
