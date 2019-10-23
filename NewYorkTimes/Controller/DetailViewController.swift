@@ -22,7 +22,9 @@ class DetailViewController: UIViewController {
     }
     var googleBook:Books! {
         didSet {
-            setUpInfo()
+            UIView.animate(withDuration: 2.5, delay: 0.0, options: [.curveEaseInOut], animations: {
+                self.setUpInfo()
+            }, completion: nil)
         }
     }
    
@@ -52,6 +54,7 @@ class DetailViewController: UIViewController {
               label.numberOfLines = 2
               label.textAlignment = .center
               label.textColor = .black
+            label.font = UIFont(name: "Courier-Bold", size: 30)
               label.adjustsFontSizeToFitWidth = true
               return label
        }()
@@ -63,6 +66,7 @@ class DetailViewController: UIViewController {
         textView.backgroundColor = .white
            textView.contentMode = .center
         textView.textColor = .black
+        textView.font = .systemFont(ofSize: 17)
            return textView
        }()
     
@@ -100,68 +104,54 @@ class DetailViewController: UIViewController {
       }
       
     private func amazonSiteAlert() {
-        let alert = UIAlertController(title: "Are You Sure?", message:"You Will Leave The App And Enter An Unaffiliated Website", preferredStyle: .actionSheet)
-              
-              let okAction = UIAlertAction(title: "Leave App", style: .destructive) { (action) in
-                  guard let urlStr = URL(string:self.bookData.amazon_product_url) else {return}
-                  UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
-              }
-              let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-              alert.addAction(okAction)
-              alert.addAction(cancel)
-              present(alert,animated: true)
-    }
-    
+           let alert = UIAlertController(title: "Are you sure?", message:"Leaving the app takes you to an unaffiliated third-party website.", preferredStyle: .actionSheet)
+                 let okAction = UIAlertAction(title: "I'm Sure", style: .destructive) { (action) in
+                     guard let urlStr = URL(string:self.bookData.amazon_product_url) else {return}
+                     UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+                 }
+                 let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+                 alert.addAction(okAction)
+                 alert.addAction(cancel)
+                 present(alert,animated: true)
+       }
+
     private func showAlert(if saved: Saved) {
-        switch saved {
-            
-        case .yes:
-            let alert = UIAlertController(title: "Sorry", message: "This is already in your favorites", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-        case .no:
-            let alert = UIAlertController(title: "YES!", message: "You have saved \"\(self.googleBook.title)\"", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alert, animated: true, completion: nil)
-       
-    }
+           switch saved {
+           case .yes:
+               let alert = UIAlertController(title: "Sorry", message: "Already Favorited!", preferredStyle: .alert)
+               alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+               present(alert, animated: true, completion: nil)
+           case .no:
+               let alert = UIAlertController(title: "Complete!", message: "\(self.googleBook.title)\"saved!", preferredStyle: .alert)
+               alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+               present(alert, animated: true, completion: nil)
+       }
         
     }
     private func optionsAlert() {
-           let alert = UIAlertController(title: "Options", message: "Click 'favorite' to save the current book", preferredStyle: .actionSheet)
-        
-        
-           let save = UIAlertAction(title: "Favorite", style: .default) { (action) in
-            
-            if let existInFaves = self.googleBook.existsInFavorites() {
-                switch existInFaves {
-                case false:
-                    let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!, amazonUrl: self.bookData.amazon_product_url, reviewUrl: self.bookData.getReviewUrl())
-                               
-                              try? BookPersistenceManager.manager.save(newBook: newFavoriteBook)
-                     self.showAlert(if: .no)
-                case true:
-                    self.showAlert(if: .yes)
-                    
-                }
-            }
-           
-           }
-        
-        let amazonAlert = UIAlertAction(title: "See On Amazon", style: .default) { (action) in
-            guard let urlStr = URL(string:self.bookData.amazon_product_url) else {return}
-            
-            UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+     let alert = UIAlertController(title: "Options", message: nil, preferredStyle: .actionSheet)
+        let save = UIAlertAction(title: "Add Favorite", style: .default) { (action) in
+         if let existInFaves = self.googleBook.existsInFavorites() {
+             switch existInFaves {
+             case false:
+                 let newFavoriteBook = FavoritesModel(imageData: self.bookImageView.image!.pngData()!, authorName: self.authorLabel.text!, description: self.descriptionTextView.text!, amazonUrl: self.bookData.amazon_product_url, reviewUrl: self.bookData.getReviewUrl())
+                           try? BookPersistenceManager.manager.save(newBook: newFavoriteBook)
+                  self.showAlert(if: .no)
+             case true:
+                 self.showAlert(if: .yes)
+             }
+         }
         }
-        
-        
-        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        
-        alert.addAction(save)
-        alert.addAction(cancel)
-        alert.addAction(amazonAlert)
-        present(alert,animated: true)
-       }
+     let amazonAlert = UIAlertAction(title: "View on Amazon", style: .default) { (action) in
+         guard let urlStr = URL(string:self.bookData.amazon_product_url) else {return}
+         UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+     }
+     let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+     alert.addAction(save)
+     alert.addAction(cancel)
+     alert.addAction(amazonAlert)
+     present(alert,animated: true)
+    }
     
        @objc private func saveButtonAction() {
            optionsAlert()
@@ -219,14 +209,5 @@ class DetailViewController: UIViewController {
                        descriptionTextView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor,constant: -10)
         ])
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

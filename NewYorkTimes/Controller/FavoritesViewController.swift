@@ -9,7 +9,7 @@
 import UIKit
 
 class FavoritesViewController: UIViewController {
-
+    
     var favorites = [FavoritesModel]() {
         didSet {
             favoriteCollectionView.reloadData()
@@ -18,21 +18,21 @@ class FavoritesViewController: UIViewController {
     
     
     lazy var favoriteCollectionView:UICollectionView = {
-        let layout:UICollectionViewFlowLayout = UICollectionViewFlowLayout.init()
-        let cv = UICollectionView(frame: UIScreen.main.bounds, collectionViewLayout: layout)
+        let layout = UICollectionViewFlowLayout()
+        let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        layout.sectionInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         layout.scrollDirection = .vertical
-        layout.itemSize = CGSize(width: 350, height: 300)
         cv.register(FavoritesCollectionViewCell.self, forCellWithReuseIdentifier: RegisterCollectionViews.favoritesCollectionView.rawValue)
         cv.delegate = self
         cv.dataSource = self
-        cv.backgroundColor = .white
+        cv.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         return cv
     }()
     
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-             view.backgroundColor = .white
+        view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         favoritesConstraints()
         loadFavoritesData()
         
@@ -80,18 +80,17 @@ class FavoritesViewController: UIViewController {
             print(error)
         }
     }
-   
+    
     private func checkIfAnythingHasBeenFavorited() {
-           let alert = UIAlertController(title: "You cannot access this page", message: "Please favorite a book to access the Favorites tab", preferredStyle: .alert)
-           let dismissAlert = UIAlertAction(title: "Dismiss", style: .cancel) { (action) in
-               self.tabBarController?.selectedIndex = 0
-               
-           }
+        let alert = UIAlertController(title: "No Access!", message: "Please favorite a book to access the Favorites tab", preferredStyle: .alert)
+        let dismissAlert = UIAlertAction(title: "Dismiss", style: .cancel) { (action) in
+            self.tabBarController?.selectedIndex = 0
+        }
         
-               alert.addAction(dismissAlert)
-           present(alert,animated: true)
-          
-       }
+        alert.addAction(dismissAlert)
+        present(alert,animated: true)
+        
+    }
 }
 extension FavoritesViewController:UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -101,51 +100,72 @@ extension FavoritesViewController:UICollectionViewDelegate,UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let favs = favorites[indexPath.row]
         let cell = favoriteCollectionView.dequeueReusableCell(withReuseIdentifier: RegisterCollectionViews.favoritesCollectionView.rawValue, for: indexPath) as! FavoritesCollectionViewCell
-        cell.configureCell(with: favs)
-
+        cell.configureCell(with: favs, collectionView: favoriteCollectionView, index: indexPath.row)
+        cell.backgroundColor = #colorLiteral(red: 0.9330009818, green: 0.9096471667, blue: 0.8983025551, alpha: 1)
+        cell.delegate = self
+        cell.actionSheetButton.tag = indexPath.row
+//        cell.changeColorOfBorderCellFunction = {
+//            CustomLayer.shared.createCustomlayer(layer: cell.layer)
+//        }
+//        cell.changeColorOfBorderCellFunction()
         return cell
     }
+}
+
+extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        return CGSize(width: 350 , height: 300 )
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        actionSheet(tag: indexPath.row)
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! FavoritesCollectionViewCell
+        selectedCell.toggle()
     }
     
     
 }
+
+
 extension FavoritesViewController:FavoriteCellDelegate {
     func actionSheet(tag: Int) {
         
-            let alert = UIAlertController(title: "Options", message: "", preferredStyle: .actionSheet)
-            let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
-                
-                 try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
-                                                self.favorites.remove(at: tag)
-                                    self.loadFavoritesData()
-                
-
-            }
-        
-            let amazon = UIAlertAction(title: "See On Amazon", style: .default) { (action) in
-                guard let urlStr = URL(string:self.favorites[tag].amazonUrl) else {return}
-                       
-                       UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
-            }
-        
-            let review = UIAlertAction(title: "Leave Review", style: .default) { (action) in
-                guard let urlStr = URL(string:self.favorites[tag].reviewUrl) else {return}
-                       
-                       UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
-            }
-
-        
-            let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            alert.addAction(cancel)
-            alert.addAction(amazon)
-            alert.addAction(review)
-            alert.addAction(delete)
+        let alert = UIAlertController(title: "Options", message: "", preferredStyle: .actionSheet)
+        let delete = UIAlertAction(title: "Delete", style: .destructive) { (action) in
+            
+            try? BookPersistenceManager.manager.deleteFavoriteBook(description: self.favorites[tag].description)
            
-            present(alert,animated: true)
+            let cell = self.favoriteCollectionView.cellForItem(at: IndexPath(row: tag, section: 0)) as! FavoritesCollectionViewCell
+            cell.toggle()
+            self.favorites.remove(at: tag)
+                   
+                 self.loadFavoritesData()
+            
+            
         }
-    
-    //test commit here
+        
+        let amazon = UIAlertAction(title: "See on Amazon", style: .default) { (action) in
+            guard let urlStr = URL(string:self.favorites[tag].amazonUrl) else {return}
+            
+            UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+        }
+        
+        let review = UIAlertAction(title: "Leave a Review", style: .default) { (action) in
+            guard let urlStr = URL(string:self.favorites[tag].reviewUrl) else {return}
+            
+            UIApplication.shared.open(urlStr, options: [:], completionHandler: nil)
+        }
+        
+        
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alert.addAction(cancel)
+        alert.addAction(amazon)
+        alert.addAction(review)
+        alert.addAction(delete)
+        
+        present(alert,animated: true)
+    }
     
 }
